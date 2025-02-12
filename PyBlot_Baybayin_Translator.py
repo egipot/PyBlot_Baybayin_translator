@@ -62,7 +62,7 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 if button_B.button("B", key='B', use_container_width=True):
     append_character("B", "B.png")
 if button_KA.button("KA", key='KA', use_container_width=True):
-    append_character("KA", "Ka.png" )
+    append_character("KA", "KA.png" )
 if button_KE.button("KE", key='KE', use_container_width=True):
     append_character("KE", "KeKi.png")
 if button_KI.button("KI", key='KI', use_container_width=True):
@@ -77,7 +77,7 @@ if button_K.button("K", key='K', use_container_width=True):
 
 button_DA, button_DE, button_DI, button_DO, button_DU, button_D, button_GA, button_GE, button_GI, button_GO, button_GU, button_G = st.columns(12)
 if button_DA.button("DA", key='DA', use_container_width=True):
-    append_character("DA", "Da.png" )
+    append_character("DA", "DA.png" )
 if button_DE.button("DE", key='DE', use_container_width=True):
     append_character("DE", "DeDi.png")
 if button_DI.button("DI", key='DI', use_container_width=True):
@@ -104,7 +104,7 @@ if button_G.button("G", key='G', use_container_width=True):
 
 button_HA, button_HE, button_HI, button_HO, button_HU, button_H, button_LA, button_LE, button_LI, button_LO, button_LU, button_L = st.columns(12)
 if button_HA.button("HA", key='HA', use_container_width=True):
-    append_character("HA", "Ha.png" )
+    append_character("HA", "HA.png" )
 if button_HE.button("HE", key='HE', use_container_width=True):
     append_character("HE", "HeHi.png")
 if button_HI.button("HI", key='HI', use_container_width=True):
@@ -144,7 +144,7 @@ if button_MU.button("MU", key="MU", use_container_width=True):
 if button_M.button("M", key="M", use_container_width=True):
     append_character("M", "M.png")
 if button_NA.button("NA", key="NA", use_container_width=True):
-    append_character("NA", "Na.png" )
+    append_character("NA", "NA.png" )
 if button_NE.button("NE", key="NE", use_container_width=True):
     append_character("NE", "NeNi.png")
 if button_NI.button("NI", key="NI", use_container_width=True):
@@ -171,7 +171,7 @@ if button_PU.button("PU", key="PU", use_container_width=True):
 if button_P.button("P", key="P", use_container_width=True):
     append_character("P", "P.png")
 if button_RA.button("RA", key="RA", use_container_width=True):
-    append_character("RA", "Ra.png" )
+    append_character("RA", "RA.png" )
 if button_RE.button("RE", key="RE", use_container_width=True):
     append_character("RE", "ReRi.png")
 if button_RI.button("RI", key="RI", use_container_width=True):
@@ -198,7 +198,7 @@ if button_SU.button("SU", key="SU", use_container_width=True):
 if button_S.button("S", key="S", use_container_width=True):
     append_character("S", "S.png")
 if button_TA.button("TA", key="TA", use_container_width=True):
-    append_character("TA", "Ta.png" )
+    append_character("TA", "TA.png" )
 if button_TE.button("TE", key="TE", use_container_width=True):
     append_character("TE", "TeTi.png")
 if button_TI.button("TI", key="TI", use_container_width=True):
@@ -225,7 +225,7 @@ if button_WU.button("WU", key="WU", use_container_width=True):
 if button_W.button("W", key="W", use_container_width=True):
     append_character("W", "W.png")
 if button_YA.button("YA", key="YA", use_container_width=True):
-    append_character("YA", "Ya.png" )
+    append_character("YA", "YA.png" )
 if button_YE.button("YE", key="YE", use_container_width=True):
     append_character("YE", "YeYi.png")
 if button_YI.button("YI", key="YI", use_container_width=True):
