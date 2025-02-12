@@ -1,0 +1,1 @@
+This app is designed to convert a Filipino (Tagalog) expression (entered per syllable) to Baybayin alphabet.
