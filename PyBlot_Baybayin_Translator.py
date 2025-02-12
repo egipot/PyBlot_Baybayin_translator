@@ -10,7 +10,7 @@ st.set_page_config(page_title="PyBlot's Baybayin Translator",
             page_icon=':flag-ph:',
             layout='wide', initial_sidebar_state='auto')
 st.title("PyBlot's Baybayin Translator")
-st.markdown("Translate a Filipino (Tagalog) expression by selecting per syllable. Then click on the Submit Button to show the equivalent Baybayin characters.")
+st.markdown("Translate a Filipino (Tagalog) expression by selecting per syllable. Then click on the Submit button to show the equivalent Baybayin characters.")
 
 if 'char_list' not in st.session_state:
     st.session_state.char_list = []
@@ -270,7 +270,7 @@ if button_space.button("space", key="space", use_container_width=True):
 st.markdown(f'''{"Tagalog expression to translate: " + " - ".join(st.session_state.char_list)}''')
 
 # Submit button to finalize the list
-if st.button("Submit List", key="btn_submit"):
+if st.button("Submit", key="btn_submit"):
     #st.write("Finalized List:", st.session_state.image_list)
     cols = st.columns(len(st.session_state.image_list))
     for col, img in zip(cols, st.session_state.image_list):
