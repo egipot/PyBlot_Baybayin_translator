@@ -1,23 +1,31 @@
+# Import the necessary libraries
 import streamlit as st
 from PIL import Image
 import os
 
 
+# Define Page settings  
 st.set_page_config(page_title="PyBlot's Baybayin Translator", 
             page_icon=':flag-ph:',
             layout='wide', initial_sidebar_state='auto')
 st.title("PyBlot's Baybayin Translator")
 st.markdown("Translate a Filipino (Tagalog) expression by selecting per syllable. Then click on the Submit button to show the equivalent Baybayin characters.")
+st.markdown("""*:gray[This app is best viewed in landscape mode and light theme (The result is not visible in dark theme).]*""")
 
+
+# Store the input syllable(s) into a list.
+# And list its equivalent Baybayin character (image .PNG) 
 if 'char_list' not in st.session_state:
     st.session_state.char_list = []
     st.session_state.image_list = []
 
 
+#Functions
 def append_character(newchar, image_file):
     st.session_state.char_list.append(newchar)
     short_path = os.path.join("images", image_file)  # Using relative path
     st.session_state.image_list.append(short_path)
+    print(short_path)
     
 def drop_character():
     st.session_state.char_list = st.session_state.char_list[:-1]
@@ -27,7 +35,9 @@ def clear_list():
     st.session_state.char_list = []
     st.session_state.image_list = []
 
-# Display buttons
+
+# Display all possible syllables (with Latin labels) as keyboard-like buttons  
+# keyboard line 1 (vowels, space, terminating characters, backspace, clear all)
 button_A, button_E, button_I, button_O, button_U, button_slash,  button_doubleslash, button_question, button_space, button_bsp, button_clear = st.columns(11)
 if button_A.button("A", key='A', use_container_width=True):
     append_character("A", "A.png")
@@ -52,8 +62,7 @@ if button_bsp.button("bkspace", key='bsp', use_container_width=True):
 if button_clear.button("clear all", key="clear_all", use_container_width=True):
     clear_list()
 
-
-
+# keyboard line 2 (consonants ending with -A)
 button_BA, button_KA, button_DA, button_GA, button_HA, button_LA, button_MA, button_NA, button_NGA, button_PA, button_RA, button_SA, button_TA, button_WA, button_YA = st.columns(15) 
 if button_BA.button("BA", key='BA', use_container_width=True):
     append_character("BA", "BA.png")
@@ -86,7 +95,7 @@ if button_YA.button("YA", key="YA", use_container_width=True):
 if button_NGA.button("NGA", key="NGA", use_container_width=True):
     append_character("NGA", "NGA.png")
 
-
+# keyboard line 3 (consonants ending with -E)
 button_BE, button_KE, button_DE, button_GE, button_HE, button_LE, button_ME, button_NE, button_NGE, button_PE, button_RE, button_SE, button_TE, button_WE, button_YE = st.columns(15) 
 if button_BE.button("BE", key='BE', use_container_width=True):
     append_character("BE", "BeBi.png")
@@ -119,7 +128,7 @@ if button_WE.button("WE", key="WE", use_container_width=True):
 if button_YE.button("YE", key="YE", use_container_width=True):
     append_character("YE", "YeYi.png")
     
-
+# keyboard line 4 (consonants ending with -I)
 button_BI, button_KI, button_DI, button_GI, button_HI, button_LI, button_MI, button_NI, button_NGI, button_PI, button_RI, button_SI, button_TI, button_WI, button_YI = st.columns(15) 
 if button_BI.button("BI", key='BI', use_container_width=True):
     append_character("BI", "BeBi.png")   
@@ -152,7 +161,7 @@ if button_WI.button("WI", key="WI", use_container_width=True):
 if button_YI.button("YI", key="YI", use_container_width=True):
     append_character("YI", "YeYi.png")
 
-
+# keyboard line 5 (consonants ending with -O)
 button_BO, button_KO, button_DO, button_GO, button_HO, button_LO, button_MO, button_NO, button_NGO, button_PO, button_RO, button_SO, button_TO, button_WO, button_YO = st.columns(15) 
 if button_BO.button("BO", key='BO', use_container_width=True):
     append_character("BO", "BoBu.png")
@@ -185,7 +194,7 @@ if button_WO.button("WO", key="WO", use_container_width=True):
 if button_YO.button("YO", key="YO", use_container_width=True):
     append_character("YO", "YoYu.png")
 
-
+# keyboard line 6 (consonants ending with -U)
 button_BU, button_KU, button_DU, button_GU, button_HU, button_LU, button_MU, button_NU, button_NGU, button_PU, button_RU, button_SU, button_TU, button_WU, button_YU = st.columns(15) 
 if button_BU.button("BU", key='BU', use_container_width=True):
     append_character("BU", "BoBu.png")
@@ -218,6 +227,7 @@ if button_WU.button("WU", key="WU", use_container_width=True):
 if button_YU.button("YU", key="YU", use_container_width=True):
     append_character("YU", "YoYu.png")
 
+# keyboard line 7 (consonant-only)
 button_B, button_K, button_D, button_G, button_H, button_L, button_M, button_N, button_NG, button_P, button_R, button_S, button_T, button_W, button_Y = st.columns(15) 
 if button_B.button("B", key='B', use_container_width=True):
     append_character("B", "B.png")
