@@ -58,7 +58,7 @@ st.text('\n')
 # Sample 5
 st.markdown('''**:blue[Pilipinas]** == **:green[Philippines]**''')
 st.markdown('''**:blue[ ---  Pi  ---  li  ---  pi  ---  na  ---  s  ---]** ==''')
-wordsample5 = ['PePi', 'LeLi', 'PePi', 'Na', 'S']
+wordsample5 = ['PePi', 'LeLi', 'PePi', 'NA', 'S']
 translate(wordsample5)
 st.text('\n')
 
