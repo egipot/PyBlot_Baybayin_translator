@@ -4,7 +4,18 @@ import os
 
 ## Access the parent directory
 parent_dir = os.path.dirname(os.path.dirname(__file__))
-print(parent_dir)  # Outputs the directory one level up
+#print(parent_dir)  # Outputs the directory one level up
+
+
+# Function to translate all the word samples: 
+def translate(wordsample):
+    wordsample_translated = []
+    for syllable in wordsample: 
+        syllable_file = syllable + '.png'
+        syllable_file = os.path.join(parent_dir, 'images', syllable_file)
+        wordsample_translated.append(syllable_file)
+    #print(wordsample1_translated)
+    st.image(wordsample_translated, use_container_width=False, width=40)
 
 
 st.title("Understanding Baybayin alphabet")
@@ -31,19 +42,11 @@ st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and mea
             For instance, "dadating == darating" (will arrive), "din == rin" (also), "narito == nandito" (something is here).  ''')
 
 
-# Function to translate all the word samples: 
-def translate(wordsample):
-    wordsample_translated = []
-    for syllable in wordsample: 
-        syllable_file = syllable + '.png'
-        syllable_file = os.path.join(parent_dir, 'images', syllable_file)
-        wordsample_translated.append(syllable_file)
-    #print(wordsample1_translated)
-    st.image(wordsample_translated, use_container_width=False, width=40)
+
 
 container1 = st.container(height = 225, border=True)
 with st.container (height = 225, border=True, key='container1'):
-    file1 = ['A', 'RA', 'W']
+    file1 = ['BA']
     translate(file1)
     col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
     with col1a:
@@ -51,26 +54,26 @@ with st.container (height = 225, border=True, key='container1'):
     with col1b:
         st.write(' = BA')
 
-    # file2 = os.path.join(parent_dir, 'images', 'BeBi.PNG')
-    # col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    # with col2a:
-    #     st.image(file2, use_container_width=False, width=40)
-    # with col2b:
-    #     st.write(' = BE / BI')
+    file2 = ['BeBi']
+    col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    with col2a:
+        st.image(file2, use_container_width=False, width=40)
+    with col2b:
+        st.write(' = BE / BI')
 
-    # file3 = os.path.join(parent_dir, 'images', 'BoBu.PNG')
-    # col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    # with col3a:
-    #     st.image(file3, use_container_width=False, width=40)
-    # with col3b:
-    #     st.write(' = BO / BU')
+    file3 = ['BoBu']
+    col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    with col3a:
+        st.image(file3, use_container_width=False, width=40)
+    with col3b:
+        st.write(' = BO / BU')
 
-    # file4 = os.path.join(parent_dir, 'images', 'B.PNG')
-    # col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    # with col4a:
-    #     st.image(file4, use_container_width=False, width=40)
-    # with col4b:
-    #     st.write(' = B')
+    file4 = ['B']
+    col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    with col4a:
+        st.image(file4, use_container_width=False, width=40)
+    with col4b:
+        st.write(' = B')
 
 
 st.subheader('Rules in writing:')
@@ -130,6 +133,3 @@ st.markdown('''*:gray[ --- https://www.gutenberg.org/files/16119/16119-h/16119-h
 st.markdown('''*:gray[ --- https://theficklefeet.com/how-to-write-baybayin/  ]*''')
 st.markdown('''*:gray[ --- https://tagalog.pinoydictionary.com/search?q=baybay  ]*''')
 st.markdown('''*:gray[ --- https://philpad.com/list-of-languages-in-the-philippines-living-dialects/ ]*''')
-
-
-st.image('example1_screenshot.png', caption='example 1')
