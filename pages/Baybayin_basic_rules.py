@@ -12,7 +12,7 @@ def translate(wordsample):
     wordsample_translated = []
     for syllable in wordsample: 
         if len(syllable) > 2:
-            syllable_caption = syllable[:2] + ' or ' + syllable[2:]
+            syllable_caption = syllable[:2].upper() + ' or ' + syllable[2:].upper()
         else:
             syllable_caption = syllable
         syllable_file = syllable + '.png'
