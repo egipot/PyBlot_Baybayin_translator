@@ -37,8 +37,8 @@ def clear_list():
 
 
 # Display all possible syllables (with Latin labels) as keyboard-like buttons  
-# keyboard line 1 (vowels, space, terminating characters, backspace, clear all)
-button_A, button_E, button_I, button_O, button_U, button_slash,  button_doubleslash, button_question, button_space, button_bsp, button_clear = st.columns(11)
+# keyboard line 1 (vowels, terminating characters, backspace, clear all)
+button_A, button_E, button_I, button_O, button_U, button_slash,  button_doubleslash, button_question, button_bsp, button_clear = st.columns(10)
 if button_A.button("A", key='A', use_container_width=True):
     append_character("A", "A.png")
 if button_E.button("E", key='E', use_container_width=True):
@@ -55,9 +55,9 @@ if button_doubleslash.button("//", key="doubleslash", use_container_width=True):
     append_character("//", "DoubleSlash.png")
 if button_question.button("?", key="question", use_container_width=True):
     append_character("?", "Question.png")
-if button_space.button("space", key="space", use_container_width=True):
-    append_character(" ", "Space.png")
-if button_bsp.button("bkspace", key='bsp', use_container_width=True):
+# if button_space.button("space", key="space", use_container_width=True):
+#     append_character(" ", "Space.png")
+if button_bsp.button("backspace", key='bsp', use_container_width=True):
     drop_character()
 if button_clear.button("clear all", key="clear_all", use_container_width=True):
     clear_list()
@@ -259,6 +259,16 @@ if button_W.button("W", key="W", use_container_width=True):
     append_character("W", "W.png")
 if button_Y.button("Y", key="Y", use_container_width=True):
     append_character("Y", "Y.png")
+
+
+# keyboard line 8 (space-only)
+if st.button("space", key="space", use_container_width=True):
+    append_character(" ", "Space.png")
+
+# removed to separate space from line1
+# button_space = st.columns() -> previously 11th in line1
+# if button_space.button("space", key="space", use_container_width=True):
+#     append_character(" ", "Space.png")
 
 
 # Display the list
