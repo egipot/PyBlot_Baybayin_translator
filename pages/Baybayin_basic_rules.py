@@ -73,6 +73,7 @@ st.markdown('''  - Direction of writing is from left-to-right in horizontal medi
 st.markdown('''  - From the original writing rules, the sounds that does not accompany a vowel. For example, in the word "araw" (sun), 
             the second syllable "-raw" is written only with the "ra" character, omitting the "w". However, the Filipino natives know that the transcribed "a - ra"  represents "araw". ''')
 
+
 with st.container (height = 130, border=True, key='container2'):
     files1 = [os.path.join(parent_dir, 'images', 'A.PNG'), os.path.join(parent_dir, 'images', 'RA.PNG'), os.path.join(parent_dir, 'images', 'W.PNG') ]
     col11a, col11b, col11c, col11d = st.columns([1, 1, 1, 10], vertical_alignment='center' )
@@ -118,3 +119,4 @@ st.markdown('''*:gray[ --- https://tagalog.pinoydictionary.com/search?q=baybay  
 st.markdown('''*:gray[ --- https://philpad.com/list-of-languages-in-the-philippines-living-dialects/ ]*''')
 
 
+st.image('example1_screenshot.png', caption='example 1')
