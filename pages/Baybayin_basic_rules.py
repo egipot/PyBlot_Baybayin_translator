@@ -55,7 +55,7 @@ with col1b:
 
 char2 = ['BeBi']
 file2 = translate(char2)
-col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
+col2a, col2b = container1.columns([1,15], gap='small', vertical_alignment='center' )
 with col2a:
     container1.image(file2, use_container_width=False, width=40)
 with col2b:
