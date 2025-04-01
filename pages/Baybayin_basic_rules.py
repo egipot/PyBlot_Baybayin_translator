@@ -46,8 +46,8 @@ st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and mea
 
 container1 = st.container(height = 225, border=True)
 with st.container (height = 225, border=True, key='container1'):
-    file1 = ['BA']
-    translate(file1)
+    char1 = ['BA']
+    file1 = translate(char1)
     col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
     with col1a:
         st.image(file1, use_container_width=False, width=40)
