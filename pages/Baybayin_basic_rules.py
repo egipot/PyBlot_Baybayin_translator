@@ -30,35 +30,47 @@ st.markdown(''' - Originally, the stand-alone consonants are not written.
 st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and meaning. In current Tagalog, there are **few** cases that this is still true, but may have slight variations. 
             For instance, "dadating == darating" (will arrive), "din == rin" (also), "narito == nandito" (something is here).  ''')
 
-#container1 = st.container(height = 225, border=True)
-# with st.container (height = 225, border=True, key='container1'):
-#     file1 = os.path.join(parent_dir, 'images', 'BA.PNG')
-#     col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
-#     with col1a:
-#         st.image(file1, use_container_width=False, width=40)
-#     with col1b:
-#         st.write(' = BA')
 
-#     file2 = os.path.join(parent_dir, 'images', 'BeBi.PNG')
-#     col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
-#     with col2a:
-#         st.image(file2, use_container_width=False, width=40)
-#     with col2b:
-#         st.write(' = BE / BI')
+# Function to translate all the word samples: 
+def translate(wordsample):
+    wordsample_translated = []
+    for syllable in wordsample: 
+        syllable_file = syllable + '.png'
+        syllable_file = os.path.join(parent_dir, 'images', syllable_file)
+        wordsample_translated.append(syllable_file)
+    #print(wordsample1_translated)
+    st.image(wordsample_translated, use_container_width=False, width=40)
 
-#     file3 = os.path.join(parent_dir, 'images', 'BoBu.PNG')
-#     col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
-#     with col3a:
-#         st.image(file3, use_container_width=False, width=40)
-#     with col3b:
-#         st.write(' = BO / BU')
+container1 = st.container(height = 225, border=True)
+with st.container (height = 225, border=True, key='container1'):
+    file1 = ['A', 'RA', 'W']
+    translate(file1)
+    col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    with col1a:
+        st.image(file1, use_container_width=False, width=40)
+    with col1b:
+        st.write(' = BA')
 
-#     file4 = os.path.join(parent_dir, 'images', 'B.PNG')
-#     col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
-#     with col4a:
-#         st.image(file4, use_container_width=False, width=40)
-#     with col4b:
-#         st.write(' = B')
+    # file2 = os.path.join(parent_dir, 'images', 'BeBi.PNG')
+    # col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    # with col2a:
+    #     st.image(file2, use_container_width=False, width=40)
+    # with col2b:
+    #     st.write(' = BE / BI')
+
+    # file3 = os.path.join(parent_dir, 'images', 'BoBu.PNG')
+    # col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    # with col3a:
+    #     st.image(file3, use_container_width=False, width=40)
+    # with col3b:
+    #     st.write(' = BO / BU')
+
+    # file4 = os.path.join(parent_dir, 'images', 'B.PNG')
+    # col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
+    # with col4a:
+    #     st.image(file4, use_container_width=False, width=40)
+    # with col4b:
+    #     st.write(' = B')
 
 
 st.subheader('Rules in writing:')

@@ -44,14 +44,14 @@ st.text('\n')
 # Sample 3
 st.markdown('''**:blue[Kumusta?]** - also means :green[How are you?].''')
 st.markdown('''**:blue[ --- Ku  ----  mu  ---  s  ---  ta  --- ]** == ''')
-wordsample3 = ['KOKU', 'MOMU', 'S', 'TA']
+wordsample3 = ['KoKu', 'MoMu', 'S', 'TA']
 translate(wordsample3)
 st.text('\n')
 
 # Sample 4
 st.markdown('''**:blue[Ingat lagi]** - the direct translation is :green[Take care always].''')
 st.markdown('''**:blue[ ---  I  ----  nga  ---  t  ---  ___  ---  La  ---  gi  ---]** == ''')
-wordsample4 = ['I', 'NGA', 'T', 'Space', 'LA', 'GeGI']
+wordsample4 = ['I', 'NGA', 'T', 'Space', 'LA', 'GeGi']
 translate(wordsample4)
 st.text('\n')
 
