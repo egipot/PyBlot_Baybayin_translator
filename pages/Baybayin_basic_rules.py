@@ -45,38 +45,37 @@ st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and mea
 
 
 container1 = st.container(height = 225, border=True)
-with st.container (height = 225, border=True, key='container1'):
-    char1 = ['BA']
-    file1 = translate(char1)
-    col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col1a:
-        st.image(file1, use_container_width=False, width=40)
-    with col1b:
-        st.write(' = BA')
+char1 = ['BA']
+file1 = translate(char1)
+col1a, col1b = container1.columns([1,15], gap='small', vertical_alignment='center' )
+with col1a:
+    container1.image(file1, use_container_width=False, width=40)
+with col1b:
+    container1.write(' = BA')
 
-    char2 = ['BeBi']
-    file2 = translate(char2)
-    col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col2a:
-        st.image(file2, use_container_width=False, width=40)
-    with col2b:
-        st.write(' = BE / BI')
+char2 = ['BeBi']
+file2 = translate(char2)
+col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
+with col2a:
+    container1.image(file2, use_container_width=False, width=40)
+with col2b:
+    container1.write(' = BE / BI')
 
-    char3 = ['BoBu']
-    file3 = translate(char3)
-    col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col3a:
-        st.image(file3, use_container_width=False, width=40)
-    with col3b:
-        st.write(' = BO / BU')
+char3 = ['BoBu']
+file3 = translate(char3)
+col3a, col3b = container1.columns([1,15], gap='small', vertical_alignment='center' )
+with col3a:
+    container1.image(file3, use_container_width=False, width=40)
+with col3b:
+    container1.write(' = BO / BU')
 
-    char4 = ['B']
-    file4 = translate(char4)
-    col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col4a:
-        st.image(file4, use_container_width=False, width=40)
-    with col4b:
-        st.write(' = B')
+char4 = ['B']
+file4 = translate(char4)
+col4a, col4b = container1.columns([1,15], gap='small', vertical_alignment='center' )
+with col4a:
+    container1.image(file4, use_container_width=False, width=40)
+with col4b:
+    container1.write(' = B')
 
 
 st.subheader('Rules in writing:')
