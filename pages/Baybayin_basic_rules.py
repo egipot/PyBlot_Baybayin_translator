@@ -11,11 +11,15 @@ parent_dir = os.path.dirname(os.path.dirname(__file__))
 def translate(wordsample):
     wordsample_translated = []
     for syllable in wordsample: 
+        if len(syllable) > 2:
+            syllable_caption = syllable[:2] + ' or ' + syllable[2:]
+        else:
+            syllable_caption = syllable
         syllable_file = syllable + '.png'
         syllable_file = os.path.join(parent_dir, 'images', syllable_file)
         wordsample_translated.append(syllable_file)
     #print(wordsample1_translated)
-    st.image(wordsample_translated, use_container_width=False, width=40)
+    st.image(wordsample_translated, use_container_width=False, width=80, caption = syllable_caption)
 
 
 st.title("Understanding Baybayin alphabet")
@@ -32,50 +36,32 @@ st.markdown('''The Philippines has more than 170 dialects, and it some of the mo
              Thus, making it difficult to standardize the learning and re-integration to the study curriculum. ''')
 
 st.subheader('Rules in speaking Filipino (Tagalog dialect):')
-st.markdown(' - A character is a combination of a consonant and vowel sound, such as BA, BE, BI, BO, BU, ... ')
+st.markdown(' - A character is a combination of a consonant and vowel sound. For example - BA, BE, BI, BO, BU. ')
 st.markdown(' - The base character is a combination of a consonant and a vowel -A sound. ')
 st.markdown(' - A dicritical mark called "kudlit" on top of a base character changes the vowel sound to either -E or -I. ')
 st.markdown(' - A dicritical mark called "kudlit" at the bottom of a base character changes the vowel sound to either -O or -U. ')
-st.markdown(''' - Originally, the stand-alone consonants are not written. 
-            But during translation, a Spanish priest transcribed these stand-alone consonants with a cross at the bottom of the base character. ''')
-st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and meaning. In current Tagalog, there are **few** cases that this is still true, but may have slight variations. 
-            For instance, "dadating == darating" (will arrive), "din == rin" (also), "narito == nandito" (something is here).  ''')
+st.markdown(''' - Originally, the stand-alone consonants are not written, even if pronounced and important in conveying the meaning. 
+            But during translation to Spanish (Latin alphabet), a priest transcribed these stand-alone consonants with a cross at the bottom of the base character (virama).''')
 
 
+ch0, ch1, ch2, ch3, ch4, ch5 = st.columns(6)
+with ch0:
+    st.write('')
+with ch1:
+    rulesample1 = ['BA']
+    translate(rulesample1)
+with ch2:
+    rulesample2 = ['BeBi']
+    translate(rulesample2)
+with ch3:
+    rulesample3 = ['BoBu']
+    translate(rulesample3)
+with ch4:
+    rulesample4 = ['B']
+    translate(rulesample4)
+with ch5:
+    st.write('')
 
-
-container1 = st.container(height = 225, border=True)
-char1 = ['BA']
-file1 = translate(char1)
-col1a, col1b = container1.columns([1,15], gap='small', vertical_alignment='center' )
-with col1a:
-    container1.image(file1, use_container_width=False, width=40)
-with col1b:
-    container1.write(' = BA')
-
-char2 = ['BeBi']
-file2 = translate(char2)
-col2a, col2b = container1.columns([1,15], gap='small', vertical_alignment='center' )
-with col2a:
-    container1.image(file2, use_container_width=False, width=40)
-with col2b:
-    container1.write(' = BE / BI')
-
-char3 = ['BoBu']
-file3 = translate(char3)
-col3a, col3b = container1.columns([1,15], gap='small', vertical_alignment='center' )
-with col3a:
-    container1.image(file3, use_container_width=False, width=40)
-with col3b:
-    container1.write(' = BO / BU')
-
-char4 = ['B']
-file4 = translate(char4)
-col4a, col4b = container1.columns([1,15], gap='small', vertical_alignment='center' )
-with col4a:
-    container1.image(file4, use_container_width=False, width=40)
-with col4b:
-    container1.write(' = B')
 
 
 st.subheader('Rules in writing:')
@@ -86,33 +72,26 @@ st.markdown('  - Pre-colonial Baybayin, there are no numbers.')
 st.markdown('  - Pre-colonial Baybayin, there is difference between upper and lower keys.') 
 st.markdown('''  - Direction of writing is from left-to-right in horizontal medium, while bottom-to-top in vertical medium such as in a bamboo. 
             Imagine writing in a bamboo trunk left-to-right, then rotate it to 90-degrees counter-clockwise to be in vertical orientation. ''')
-
+st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and meaning. In current Tagalog, there are **few** cases that this is still true, but may have slight variations. 
+            For instance, "dadating == darating" (will arrive), "din == rin" (also), "narito == nandito" (something is here).  ''')
 st.markdown('''  - From the original writing rules, the sounds that does not accompany a vowel. For example, in the word "araw" (sun), 
             the second syllable "-raw" is written only with the "ra" character, omitting the "w". However, the Filipino natives know that the transcribed "a - ra"  represents "araw". ''')
 
-
-# with st.container (height = 130, border=True, key='container2'):
-#     files1 = [os.path.join(parent_dir, 'images', 'A.PNG'), os.path.join(parent_dir, 'images', 'RA.PNG'), os.path.join(parent_dir, 'images', 'W.PNG') ]
-#     col11a, col11b, col11c, col11d = st.columns([1, 1, 1, 10], vertical_alignment='center' )
-#     with col11a:
-#         st.image(files1[0], use_container_width=False, width=40)
-#     with col11b:
-#         st.image(files1[1], use_container_width=False, width=40)    
-#     with col11c:
-#         st.image(files1[2], use_container_width=False, width=40)   
-#     with col11d:
-#         st.write(' == ARAW in Modern Baybayin translation')
- 
-#     col22a, col22b, col22c = st.columns([1, 1, 10], vertical_alignment='center' )
-#     with col22a:
-#         st.image(files1[0], use_container_width=False, width=40)
-#     with col22b:
-#         st.image(files1[1], use_container_width=False, width=40)    
-#     # with col11c:
-#     #     st.image(files1[2], use_container_width=False, width=40)   
-#     with col22c:
-#         st.write(' == ARAW in original Baybayin (pre-colonial version)')
-
+ch6, ch7, ch8, ch9, ch10 = st.columns(5, border=False)
+with ch6:
+    st.write('')
+with ch7:
+    rulesample4 = ['A']
+    translate(rulesample4)
+with ch8:
+    rulesample5 = ['RA']
+    translate(rulesample5)
+with ch9:
+    rulesample6 = ['W']
+    translate(rulesample6)
+    st.caption ('^This stand-alone consonant is not written in pre-colonial Baybayin')
+with ch10:
+    st.write('')
 
 st.subheader('In this Baybayin translator: ')
 st.markdown('''To make the usage and learning easier, I decided to : ''')
