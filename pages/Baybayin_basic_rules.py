@@ -54,21 +54,24 @@ with st.container (height = 225, border=True, key='container1'):
     with col1b:
         st.write(' = BA')
 
-    file2 = ['BeBi']
+    char2 = ['BeBi']
+    file2 = translate(char2)
     col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
     with col2a:
         st.image(file2, use_container_width=False, width=40)
     with col2b:
         st.write(' = BE / BI')
 
-    file3 = ['BoBu']
+    char3 = ['BoBu']
+    file3 = translate(char3)
     col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
     with col3a:
         st.image(file3, use_container_width=False, width=40)
     with col3b:
         st.write(' = BO / BU')
 
-    file4 = ['B']
+    char4 = ['B']
+    file4 = translate(char4)
     col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
     with col4a:
         st.image(file4, use_container_width=False, width=40)
