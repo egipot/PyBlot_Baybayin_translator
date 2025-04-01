@@ -28,36 +28,43 @@ def translate(wordsample):
 st.text('\n')
 
 # Sample 1
-st.markdown('''**:blue[Salamat]** - this is the Tagalog translation of :green[Thank You].''')
+st.markdown('''**:blue[Salamat]** - this is the Tagalog translation of **:green[Thank You].**''')
 st.markdown('''**:blue[ ---  Sa  ---  la  ---  ma  ---  t  ---]** == ''')
 wordsample1 = ['SA', 'LA', 'MA', 'T']
 translate(wordsample1)
 st.text('\n')
 
 # Sample 2
-st.markdown('''**:blue[Magandang Umaga]** is the same as :green[Good Morning].''')
+st.markdown('''**:blue[Magandang Umaga]** is the same as **:green[Good Morning].**''')
 st.markdown('''**:blue[ --- Ma  ----  ga  ---  n  ---  da  ---  ng  --- ___  ---   U  ---  ma  ---  ga  ---]** == ''')
 wordsample2 = ['MA', 'GA', 'N', 'DA', 'NG', 'Space', 'U', 'MA', 'GA']
 translate(wordsample2)
 st.text('\n')
 
 # Sample 3
-st.markdown('''**:blue[Kumusta?]** - also means :green[How are you?].''')
+st.markdown('''**:blue[Kumusta?]** - also means **:green[How are you?].**''')
 st.markdown('''**:blue[ --- Ku  ----  mu  ---  s  ---  ta  --- ]** == ''')
 wordsample3 = ['KoKu', 'MoMu', 'S', 'TA']
 translate(wordsample3)
 st.text('\n')
 
 # Sample 4
-st.markdown('''**:blue[Ingat lagi]** - the direct translation is :green[Take care always].''')
+st.markdown('''**:blue[Ingat lagi]** - the direct translation is **:green[Take care always].**''')
 st.markdown('''**:blue[ ---  I  ----  nga  ---  t  ---  ___  ---  La  ---  gi  ---]** == ''')
 wordsample4 = ['I', 'NGA', 'T', 'Space', 'LA', 'GeGi']
 translate(wordsample4)
 st.text('\n')
 
+# Sample 5
+st.markdown('''**:blue[Pilipinas]** == **:green[Philippines]**''')
+st.markdown('''**:blue[ ---  Pi  ---  li  ---  pi  ---  na  ---  s  ---]** ==''')
+wordsample5 = ['PePi', 'LeLi', 'PePi', 'Na', 'S']
+translate(wordsample5)
+st.text('\n')
+
+
 st.markdown('''Notice that the consonant-only syllable (i.e. sound that is pronounced in combination of the previous syllable \
-             and is not pronounced with a vowel after), 
-            is still represented as a separate character. Such as the "p" in the word "ulap" (cloud). \
+             and is not pronounced with a vowel after), is still represented as a separate character. Such as the "s" in the word "Pilipinas". \
             This makes it easier to learn and translate Baybayin.''')
 st.markdown('''In old documentations about pre-collonial Baybayin, such syllables are elimited in writing, even if pronounced and important in conveying the meaning. \
             Our ancestors already know the words from verbal learning, and writing such syllables was considered unnecessary. \
