@@ -31,34 +31,34 @@ st.markdown(''' - In ancient Tagalog, DA and RA have the same characters and mea
             For instance, "dadating == darating" (will arrive), "din == rin" (also), "narito == nandito" (something is here).  ''')
 
 #container1 = st.container(height = 225, border=True)
-with st.container (height = 225, border=True, key='container1'):
-    file1 = os.path.join(parent_dir, 'images', 'BA.PNG')
-    col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col1a:
-        st.image(file1, use_container_width=False, width=40)
-    with col1b:
-        st.write(' = BA')
+# with st.container (height = 225, border=True, key='container1'):
+#     file1 = os.path.join(parent_dir, 'images', 'BA.PNG')
+#     col1a, col1b = st.columns([1,15], gap='small', vertical_alignment='center' )
+#     with col1a:
+#         st.image(file1, use_container_width=False, width=40)
+#     with col1b:
+#         st.write(' = BA')
 
-    file2 = os.path.join(parent_dir, 'images', 'BeBi.PNG')
-    col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col2a:
-        st.image(file2, use_container_width=False, width=40)
-    with col2b:
-        st.write(' = BE / BI')
+#     file2 = os.path.join(parent_dir, 'images', 'BeBi.PNG')
+#     col2a, col2b = st.columns([1,15], gap='small', vertical_alignment='center' )
+#     with col2a:
+#         st.image(file2, use_container_width=False, width=40)
+#     with col2b:
+#         st.write(' = BE / BI')
 
-    file3 = os.path.join(parent_dir, 'images', 'BoBu.PNG')
-    col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col3a:
-        st.image(file3, use_container_width=False, width=40)
-    with col3b:
-        st.write(' = BO / BU')
+#     file3 = os.path.join(parent_dir, 'images', 'BoBu.PNG')
+#     col3a, col3b = st.columns([1,15], gap='small', vertical_alignment='center' )
+#     with col3a:
+#         st.image(file3, use_container_width=False, width=40)
+#     with col3b:
+#         st.write(' = BO / BU')
 
-    file4 = os.path.join(parent_dir, 'images', 'B.PNG')
-    col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
-    with col4a:
-        st.image(file4, use_container_width=False, width=40)
-    with col4b:
-        st.write(' = B')
+#     file4 = os.path.join(parent_dir, 'images', 'B.PNG')
+#     col4a, col4b = st.columns([1,15], gap='small', vertical_alignment='center' )
+#     with col4a:
+#         st.image(file4, use_container_width=False, width=40)
+#     with col4b:
+#         st.write(' = B')
 
 
 st.subheader('Rules in writing:')
@@ -74,27 +74,28 @@ st.markdown('''  - From the original writing rules, the sounds that does not acc
             the second syllable "-raw" is written only with the "ra" character, omitting the "w". However, the Filipino natives know that the transcribed "a - ra"  represents "araw". ''')
 
 
-with st.container (height = 130, border=True, key='container2'):
-    files1 = [os.path.join(parent_dir, 'images', 'A.PNG'), os.path.join(parent_dir, 'images', 'RA.PNG'), os.path.join(parent_dir, 'images', 'W.PNG') ]
-    col11a, col11b, col11c, col11d = st.columns([1, 1, 1, 10], vertical_alignment='center' )
-    with col11a:
-        st.image(files1[0], use_container_width=False, width=40)
-    with col11b:
-        st.image(files1[1], use_container_width=False, width=40)    
-    with col11c:
-        st.image(files1[2], use_container_width=False, width=40)   
-    with col11d:
-        st.write(' == ARAW in Modern Baybayin translation')
+# with st.container (height = 130, border=True, key='container2'):
+#     files1 = [os.path.join(parent_dir, 'images', 'A.PNG'), os.path.join(parent_dir, 'images', 'RA.PNG'), os.path.join(parent_dir, 'images', 'W.PNG') ]
+#     col11a, col11b, col11c, col11d = st.columns([1, 1, 1, 10], vertical_alignment='center' )
+#     with col11a:
+#         st.image(files1[0], use_container_width=False, width=40)
+#     with col11b:
+#         st.image(files1[1], use_container_width=False, width=40)    
+#     with col11c:
+#         st.image(files1[2], use_container_width=False, width=40)   
+#     with col11d:
+#         st.write(' == ARAW in Modern Baybayin translation')
  
-    col22a, col22b, col22c = st.columns([1, 1, 10], vertical_alignment='center' )
-    with col22a:
-        st.image(files1[0], use_container_width=False, width=40)
-    with col22b:
-        st.image(files1[1], use_container_width=False, width=40)    
-    # with col11c:
-    #     st.image(files1[2], use_container_width=False, width=40)   
-    with col22c:
-        st.write(' == ARAW in original Baybayin (pre-colonial version)')
+#     col22a, col22b, col22c = st.columns([1, 1, 10], vertical_alignment='center' )
+#     with col22a:
+#         st.image(files1[0], use_container_width=False, width=40)
+#     with col22b:
+#         st.image(files1[1], use_container_width=False, width=40)    
+#     # with col11c:
+#     #     st.image(files1[2], use_container_width=False, width=40)   
+#     with col22c:
+#         st.write(' == ARAW in original Baybayin (pre-colonial version)')
+
 
 st.subheader('In this Baybayin translator: ')
 st.markdown('''To make the usage and learning easier, I decided to : ''')

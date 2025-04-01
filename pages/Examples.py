@@ -37,7 +37,7 @@ st.text('\n')
 # Sample 2
 st.markdown('''**:blue[Magandang Umaga]** is the same as :green[Good Morning].''')
 st.markdown('''**:blue[ --- Ma  ----  ga  ---  n  ---  da  ---  ng  --- ___  ---   U  ---  ma  ---  ga  ---]** == ''')
-wordsample2 = ['MA', 'GA', 'N', 'DA', 'NG', 'space', 'U', 'MA', 'GA']
+wordsample2 = ['MA', 'GA', 'N', 'DA', 'NG', 'Space', 'U', 'MA', 'GA']
 translate(wordsample2)
 st.text('\n')
 
@@ -51,7 +51,7 @@ st.text('\n')
 # Sample 4
 st.markdown('''**:blue[Ingat lagi]** - the direct translation is :green[Take care always].''')
 st.markdown('''**:blue[ ---  I  ----  nga  ---  t  ---  ___  ---  La  ---  gi  ---]** == ''')
-wordsample4 = ['I', 'NGA', 'T', 'space', 'LA', 'GeGI']
+wordsample4 = ['I', 'NGA', 'T', 'Space', 'LA', 'GeGI']
 translate(wordsample4)
 st.text('\n')
 
