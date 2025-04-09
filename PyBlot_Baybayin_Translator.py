@@ -10,7 +10,7 @@ st.set_page_config(page_title="PyBlot's Baybayin Translator",
             layout='wide', initial_sidebar_state='auto')
 st.title("PyBlot's Baybayin Translator")
 st.markdown("Translate a Filipino (Tagalog) expression by selecting per syllable. Then click on the Submit button to show the equivalent Baybayin characters.")
-st.markdown("""*:gray[This app is best viewed in landscape mode and light theme (The result is not visible in dark theme).]*""")
+st.markdown("""*:gray[This app is best viewed in landscape mode and light theme.]*""")
 
 
 # Store the input syllable(s) into a list.
