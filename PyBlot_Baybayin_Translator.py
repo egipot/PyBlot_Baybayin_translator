@@ -23,7 +23,7 @@ if 'char_list' not in st.session_state:
 #Functions
 def append_character(newchar, image_file):
     st.session_state.char_list.append(newchar)
-    short_path = os.path.join("images", image_file)  # Using relative path
+    short_path = os.path.join("images2", image_file)  # Using relative path
     st.session_state.image_list.append(short_path)
     print(short_path)
     
@@ -281,6 +281,6 @@ st.markdown(f'''{"Tagalog expression to translate: " + " - ".join(st.session_sta
 # Submit button to finalize the list
 if st.button("Submit", key="btn_submit"):
     #st.write("Finalized List:", st.session_state.image_list)
-    cols = st.columns(len(st.session_state.image_list))
+    cols = st.columns(len(st.session_state.image_list), vertical_alignment='center')
     for col, img in zip(cols, st.session_state.image_list):
         col.image(img, use_container_width=True)
