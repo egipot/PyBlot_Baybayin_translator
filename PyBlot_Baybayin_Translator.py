@@ -10,7 +10,7 @@ st.set_page_config(page_title="PyBlot's Baybayin Translator",
             layout='wide', initial_sidebar_state='auto')
 st.title("PyBlot's Baybayin Translator")
 st.markdown("Translate a Filipino (Tagalog) expression by selecting per syllable. Then click on the Submit button to show the equivalent Baybayin characters.")
-st.markdown("""*:gray[This app is best viewed in landscape mode and light theme.]*""")
+st.markdown("""*:gray[This app is best viewed in landscape mode and using light theme.]*""")
 
 
 # Store the input syllable(s) into a list.
@@ -25,7 +25,7 @@ def append_character(newchar, image_file):
     st.session_state.char_list.append(newchar)
     short_path = os.path.join("images2", image_file)  # Using relative path
     st.session_state.image_list.append(short_path)
-    print(short_path)
+    #print(short_path)
     
 def drop_character():
     st.session_state.char_list = st.session_state.char_list[:-1]
@@ -284,3 +284,8 @@ if st.button("Submit", key="btn_submit"):
     cols = st.columns(len(st.session_state.image_list), vertical_alignment='center')
     for col, img in zip(cols, st.session_state.image_list):
         col.image(img, use_container_width=True)
+
+
+
+
+st.markdown("""*:gray[The result of this translator is a list of images for illustration purposes. If there is a need to provide the text version, you may email me (kalatasart@gmail.com) for OpenType and TrueType font files.]*""")
