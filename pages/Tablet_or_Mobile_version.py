@@ -64,6 +64,18 @@ if button_bsp.button("backspace", key='bsp', use_container_width=True):
 if button_clear.button("clear all", key="clear_all", use_container_width=True):
     clear_list()
 
+button_BA, button_BE, button_BI, button_BO, button_BU = st.columns(5) 
+if button_BA.button("BA", key='BA', use_container_width=True):
+    append_character("BA", "BA.png")
+if button_BE.button("BE", key='BE', use_container_width=True):
+    append_character("BE", "BeBi.png")
+if button_BI.button("BI", key='BI', use_container_width=True):
+    append_character("BI", "BeBi.png") 
+if button_BO.button("BO", key='BO', use_container_width=True):
+    append_character("BO", "BoBu.png")
+if button_BU.button("BU", key='BU', use_container_width=True):
+    append_character("BU", "BoBu.png")
+
 # keyboard line 2 (consonants ending with -A)
 # button_BA, button_KA, button_DA, button_GA, button_HA, button_LA, button_MA, button_NA, button_NGA, button_PA, button_RA, button_SA, button_TA, button_WA, button_YA = st.columns(15) 
 # if button_BA.button("BA", key='BA', use_container_width=True):
