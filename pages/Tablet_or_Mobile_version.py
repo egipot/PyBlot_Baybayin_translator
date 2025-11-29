@@ -38,18 +38,6 @@ def clear_list():
 
 # Display all possible syllables (with Latin labels) as keyboard-like buttons  
 # keyboard line 1 (vowels, terminating characters, backspace, clear all)
-button_A, button_E, button_I, button_O, button_U = st.columns(5)
-if button_A.button("A", key='A', use_container_width=True):
-    append_character("A", "A.png")
-if button_E.button("E", key='E', use_container_width=True):
-    append_character("E", "E.png")
-if button_I.button("I", key='I',use_container_width=True):
-    append_character("I", "I.png")
-if button_O.button("O", key='O',use_container_width=True):
-    append_character("O", "O.png")
-if button_U.button("U", key='U',use_container_width=True):
-    append_character("U", "U.png")
-
 button_slash,  button_doubleslash, button_question, button_bsp, button_clear = st.columns(5)
 if button_slash.button("/", key="slash", use_container_width=True):
     append_character("/", "Slash.png" )
@@ -64,7 +52,19 @@ if button_bsp.button("backspace", key='bsp', use_container_width=True):
 if button_clear.button("clear all", key="clear_all", use_container_width=True):
     clear_list()
 
-button_BA, button_BE, button_BI, button_BO, button_BU = st.columns(5) 
+button_A, button_E, button_I, button_O, button_U = st.columns(5)
+if button_A.button("A", key='A', use_container_width=True):
+    append_character("A", "A.png")
+if button_E.button("E", key='E', use_container_width=True):
+    append_character("E", "E.png")
+if button_I.button("I", key='I',use_container_width=True):
+    append_character("I", "I.png")
+if button_O.button("O", key='O',use_container_width=True):
+    append_character("O", "O.png")
+if button_U.button("U", key='U',use_container_width=True):
+    append_character("U", "U.png")
+
+button_BA, button_BE, button_BI, button_BO, button_BU, button_B = st.columns(6) 
 if button_BA.button("BA", key='BA', use_container_width=True):
     append_character("BA", "BA.png")
 if button_BE.button("BE", key='BE', use_container_width=True):
@@ -75,13 +75,31 @@ if button_BO.button("BO", key='BO', use_container_width=True):
     append_character("BO", "BoBu.png")
 if button_BU.button("BU", key='BU', use_container_width=True):
     append_character("BU", "BoBu.png")
+if button_B.button("B", key='B', use_container_width=True):
+    append_character("B", "B.png")
+
+
+button_KA, button_KE, button_KI, button_KO, button_KU, button_K = st.columns(6) 
+if button_KA.button("KA", key='KA', use_container_width=True):
+    append_character("KA", "KA.png" )
+if button_KE.button("KE", key='KE', use_container_width=True):
+    append_character("KE", "KeKi.png")
+if button_KI.button("KI", key='KI', use_container_width=True):
+    append_character("KI", "KeKi.png")
+if button_KO.button("KO", key='KO', use_container_width=True):
+    append_character("KO", "KoKu.png")
+if button_KU.button("KU", key='KU', use_container_width=True):
+    append_character("KU", "KoKu.png")
+if button_K.button("K", key='K', use_container_width=True):
+    append_character("K", "K.png")
+
+
 
 # keyboard line 2 (consonants ending with -A)
 # button_BA, button_KA, button_DA, button_GA, button_HA, button_LA, button_MA, button_NA, button_NGA, button_PA, button_RA, button_SA, button_TA, button_WA, button_YA = st.columns(15) 
 # if button_BA.button("BA", key='BA', use_container_width=True):
 #     append_character("BA", "BA.png")
-# if button_KA.button("KA", key='KA', use_container_width=True):
-#     append_character("KA", "KA.png" )
+
 # if button_DA.button("DA", key='DA', use_container_width=True):
 #     append_character("DA", "DA.png" )
 # if button_GA.button("GA", key='GA', use_container_width=True):
@@ -113,8 +131,7 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 # button_BE, button_KE, button_DE, button_GE, button_HE, button_LE, button_ME, button_NE, button_NGE, button_PE, button_RE, button_SE, button_TE, button_WE, button_YE = st.columns(15) 
 # if button_BE.button("BE", key='BE', use_container_width=True):
 #     append_character("BE", "BeBi.png")
-# if button_KE.button("KE", key='KE', use_container_width=True):
-#     append_character("KE", "KeKi.png")
+
 # if button_DE.button("DE", key='DE', use_container_width=True):
 #     append_character("DE", "DeDi.png")
 # if button_GE.button("GE", key='GE', use_container_width=True):
@@ -146,8 +163,7 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 # button_BI, button_KI, button_DI, button_GI, button_HI, button_LI, button_MI, button_NI, button_NGI, button_PI, button_RI, button_SI, button_TI, button_WI, button_YI = st.columns(15) 
 # if button_BI.button("BI", key='BI', use_container_width=True):
 #     append_character("BI", "BeBi.png")   
-# if button_KI.button("KI", key='KI', use_container_width=True):
-#     append_character("KI", "KeKi.png")
+
 # if button_DI.button("DI", key='DI', use_container_width=True):
 #     append_character("DI", "DeDi.png")
 # if button_GI.button("GI", key='GI', use_container_width=True):
@@ -179,8 +195,7 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 # button_BO, button_KO, button_DO, button_GO, button_HO, button_LO, button_MO, button_NO, button_NGO, button_PO, button_RO, button_SO, button_TO, button_WO, button_YO = st.columns(15) 
 # if button_BO.button("BO", key='BO', use_container_width=True):
 #     append_character("BO", "BoBu.png")
-# if button_KO.button("KO", key='KO', use_container_width=True):
-#     append_character("KO", "KoKu.png")
+
 # if button_DO.button("DO", key='DO', use_container_width=True):
 #     append_character("DO", "DoDu.png")
 # if button_GO.button("GO", key='GO', use_container_width=True):
@@ -212,8 +227,7 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 # button_BU, button_KU, button_DU, button_GU, button_HU, button_LU, button_MU, button_NU, button_NGU, button_PU, button_RU, button_SU, button_TU, button_WU, button_YU = st.columns(15) 
 # if button_BU.button("BU", key='BU', use_container_width=True):
 #     append_character("BU", "BoBu.png")
-# if button_KU.button("KU", key='KU', use_container_width=True):
-#     append_character("KU", "KoKu.png")
+
 # if button_DU.button("DU", key='DU', use_container_width=True):
 #     append_character("DU", "DoDu.png")
 # if button_GU.button("GU", key='GU', use_container_width=True):
@@ -242,41 +256,38 @@ if button_BU.button("BU", key='BU', use_container_width=True):
 #     append_character("YU", "YoYu.png")
 
 # keyboard line 7 (consonant-only)
-button_B, button_K, button_D, button_G, button_H = st.columns(5)  
-if button_B.button("B", key='B', use_container_width=True):
-    append_character("B", "B.png")
-if button_K.button("K", key='K', use_container_width=True):
-    append_character("K", "K.png")
-if button_D.button("D", key='D', use_container_width=True):
-    append_character("D", "D.png" )
-if button_G.button("G", key='G', use_container_width=True):
-    append_character("G", "G.png")
-if button_H.button("H", key='H', use_container_width=True):
-    append_character("H", "H.png")
+# button_B, button_K, button_D, button_G, button_H = st.columns(5)  
 
-button_L, button_M, button_N, button_NG, button_P = st.columns(5) 
-if button_L.button("L", key='L', use_container_width=True):
-    append_character("L", "L.png")
-if button_M.button("M", key="M", use_container_width=True):
-    append_character("M", "M.png")
-if button_N.button("N", key="N", use_container_width=True):
-    append_character("N", "N.png")
-if button_NG.button("NG", key="NG", use_container_width=True):
-    append_character("NG", "NG.png")
-if button_P.button("P", key="P", use_container_width=True):
-    append_character("P", "P.png")
+# if button_D.button("D", key='D', use_container_width=True):
+#     append_character("D", "D.png" )
+# if button_G.button("G", key='G', use_container_width=True):
+#     append_character("G", "G.png")
+# if button_H.button("H", key='H', use_container_width=True):
+#     append_character("H", "H.png")
 
-button_R, button_S, button_T, button_W, button_Y = st.columns(5) 
-if button_R.button("R", key="R", use_container_width=True):
-    append_character("R", "R.png")
-if button_S.button("S", key="S", use_container_width=True):
-    append_character("S", "S.png")
-if button_T.button("T", key="T", use_container_width=True):
-    append_character("T", "T.png")
-if button_W.button("W", key="W", use_container_width=True):
-    append_character("W", "W.png")
-if button_Y.button("Y", key="Y", use_container_width=True):
-    append_character("Y", "Y.png")
+# button_L, button_M, button_N, button_NG, button_P = st.columns(5) 
+# if button_L.button("L", key='L', use_container_width=True):
+#     append_character("L", "L.png")
+# if button_M.button("M", key="M", use_container_width=True):
+#     append_character("M", "M.png")
+# if button_N.button("N", key="N", use_container_width=True):
+#     append_character("N", "N.png")
+# if button_NG.button("NG", key="NG", use_container_width=True):
+#     append_character("NG", "NG.png")
+# if button_P.button("P", key="P", use_container_width=True):
+#     append_character("P", "P.png")
+
+# button_R, button_S, button_T, button_W, button_Y = st.columns(5) 
+# if button_R.button("R", key="R", use_container_width=True):
+#     append_character("R", "R.png")
+# if button_S.button("S", key="S", use_container_width=True):
+#     append_character("S", "S.png")
+# if button_T.button("T", key="T", use_container_width=True):
+#     append_character("T", "T.png")
+# if button_W.button("W", key="W", use_container_width=True):
+#     append_character("W", "W.png")
+# if button_Y.button("Y", key="Y", use_container_width=True):
+#     append_character("Y", "Y.png")
 
 
 # keyboard line 8 (space-only)
